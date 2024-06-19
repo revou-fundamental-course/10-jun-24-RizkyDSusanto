@@ -6,28 +6,30 @@
     <title>Website Konversi Suhu</title>
     <!-- Ini link css -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
 </head>
-<body>
+<body style="background-color: silver;">
     <header>
-        <h1>Website Konversi Suhu</h1>
+        <h1 style="text-align: center;">WEBSITE KONVERSI SUHU</h1>
     </header>
 
     <!-- Main Content  -->
     <main>
-        <p>Masukkan Suhu Derajat Celcius (&deg;C) ... </p>
+        <p style="text-align: center;">Masukkan suhu derajat Celsius (&deg;C) ke kotak dibawah, 
+            lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F). </p>
         <!-- Section Celcius -->
         <section class="celcius-container">
             <header>
-                <h3>Celcius (&deg;C):</h3>
+                <h3>Celsius (&deg;C):</h3>
             </header>
 
             <section>
-                <textarea></textarea>
+                <textarea id="inputC"></textarea>
 
                 <section>
-                    <button class="button green-color">Konversi</button>
-                    <button class="button orange-color">Reset</button>
-                    <button class="button blue-color">Reverse</button>
+                    <button class="button green-color" onclick="konver()">Konversi</button>
+                    <button class="button orange-color" onclick="reset()">Reset</button>
+                    <button class="button blue-color" onclick="reverse()">Reverse</button>
                 </section>
             </section>
 
@@ -41,18 +43,18 @@
             </header>
 
             <section>
-                <textarea></textarea>
+                <textarea id="inputF"></textarea>
             </section>
         </section>
 
         <!-- Section Calculate -->
         <section>
             <header>
-                <h3>Convertion Calculate:</h3>
+                <h3>Cara Kalkulasi:</h3>
             </header>
 
             <section>
-                <textarea></textarea>
+                <textarea id="hasilHitung"></textarea>
             </section>
         </section>
         </section>
@@ -65,17 +67,22 @@
             </header>
 
             <p>Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan
-                Suhu <span class="subject-info">S</span> dalam derajat Celcius (&deg;C) ...
+                Suhu <span class="subject-info">S</span> dalam derajat Celcius (&deg;C)
+                kali <span class="number-info">9/5</span> tambah <span class="number-info">32</span>.
             </p>
 
             <p>
                 <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
-                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 1.8) + 32
+                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 
+                <span class="number-info">9/5</span>) + <span class="number-info">32</span>
             </p>
 
+            <p>atau</p>
+
             <p>
-                <span class="subject-info">S</span><sub>(&deg;C)</sub> = 
-                (<span class="subject-info">S</span><sub>(&deg;F)</sub> - 32) / 1.8
+                <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
+                (<span class="subject-info">S</span><sub>(&deg;C)</sub> x
+                <span class="number-info">1.8</span>) + <span class="number-info">32</span>
             </p>
 
         </section>
