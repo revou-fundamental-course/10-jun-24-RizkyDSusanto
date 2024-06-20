@@ -8,64 +8,69 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/script.js"></script>
 </head>
-<body style="background-color: silver;">
+<body>
     <header>
-        <h1 style="text-align: center;">WEBSITE KONVERSI SUHU</h1>
+        <h1 class="penjelasan">WEBSITE KONVERSI SUHU</h1>
     </header>
 
     <!-- Main Content  -->
     <main>
-        <p style="text-align: center;">Masukkan suhu derajat Celsius (&deg;C) ke kotak dibawah, 
-            lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F). </p>
-        <!-- Section Celcius -->
-        <section class="celcius-container">
-            <header>
-                <h3>Celsius (&deg;C):</h3>
-            </header>
+        <p class="penjelasan">Masukkan suhu derajat lalu klik tombol <b>"Konversi"</b> untuk mengubah menjadi Fahrenheit 
+            atau klik tombol <b>"Reverse"</b> untuk mengubah menjadi Celsius.</p>
 
+        <section class="suhu-container">
+            <!-- Section Celcius -->
             <section>
-                <textarea id="inputC"></textarea>
-
+                <header>
+                    <h3>Celsius (&deg;C):</h3>
+                </header>
+    
                 <section>
-                    <button class="button green-color" onclick="konver()">Konversi</button>
-                    <button class="button orange-color" onclick="reset()">Reset</button>
-                    <button class="button blue-color" onclick="reverse()">Reverse</button>
+                    <input id="inputC" type="number"></input>
                 </section>
             </section>
 
+            <!-- Section Fahrenheit -->
+            <section>
+                <header>
+                    <h3>Fahrenheit (&deg;F):</h3>
+                </header>
+
+                <section>
+                    <input id="inputF" type="number"></input>
+                </section>
+            </section>
         </section>
 
         <section class="result-container">
-            <!-- Section Fahrenheit -->
-        <section>
-            <header>
-                <h3>Fahrenheit (&deg;F):</h3>
-            </header>
-
+            <!-- Section Tombol -->
             <section>
-                <textarea id="inputF"></textarea>
+                <br>
+                <button class="button green-color" onclick="konver()">Konversi</button>
+                <button class="button orange-color" onclick="reset()">Reset</button>
+                <button class="button blue-color" onclick="reverse()">Reverse</button>
             </section>
-        </section>
 
-        <!-- Section Calculate -->
-        <section>
-            <header>
-                <h3>Cara Kalkulasi:</h3>
-            </header>
-
+            <!-- Section Calculate -->
             <section>
-                <textarea id="hasilHitung"></textarea>
+                <header>
+                    <h3>Cara Kalkulasi:</h3>
+                </header>
+
+                <section>
+                    <input id="hasilHitung" readonly></input>
+                </section>
             </section>
-        </section>
         </section>
 
         <br><hr>
         <!-- Section Formula/Info -->
         <section>
             <header>
-                <h1>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F) </h1>
+                <h1>Cara Konversi Celcius (&deg;C) dengan Fahrenheit (&deg;F) </h1>
             </header>
 
+            <!-- FORMULA KE FAHRENHEIT -->
             <p>Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit (&deg;F) sama dengan
                 Suhu <span class="subject-info">S</span> dalam derajat Celcius (&deg;C)
                 kali <span class="number-info">9/5</span> tambah <span class="number-info">32</span>.
@@ -74,15 +79,27 @@
             <p>
                 <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
                 (<span class="subject-info">S</span><sub>(&deg;C)</sub> x 
-                <span class="number-info">9/5</span>) + <span class="number-info">32</span>
-            </p>
+                <span class="number-info">9/5</span>) + <span class="number-info">32</span> atau
 
-            <p>atau</p>
-
-            <p>
                 <span class="subject-info">S</span><sub>(&deg;F)</sub> = 
                 (<span class="subject-info">S</span><sub>(&deg;C)</sub> x
                 <span class="number-info">1.8</span>) + <span class="number-info">32</span>
+            </p>
+
+            <!-- FORMULA KE CELCIUS -->
+            <p>Suhu <span class="subject-info">S</span> dalam derajat Celcius (&deg;C) sama dengan
+                Suhu <span class="subject-info">S</span> dalam derajat Fahrenheit (&deg;F)
+                kurang <span class="number-info">32</span> bagi <span class="number-info">9/5</span>.
+            </p>
+
+            <p>
+                <span class="subject-info">S</span><sub>(&deg;C)</sub> = 
+                (<span class="subject-info">S</span><sub>(&deg;F)</sub> - 
+                <span class="number-info">32</span>) / <span class="number-info">9/5</span> atau
+
+                <span class="subject-info">S</span><sub>(&deg;C)</sub> = 
+                (<span class="subject-info">S</span><sub>(&deg;F)</sub> -
+                <span class="number-info">32</span>) / <span class="number-info">1.8</span>
             </p>
 
         </section>
